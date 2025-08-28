@@ -12,16 +12,20 @@ for(const heart of heartIcon){
     })
 }
 
+
+// call function and alert messege
 let calling = document.getElementsByClassName("call-btn");
 for(const call of calling){
     call.addEventListener("click", function(){
         let amount = parseInt(id('coin').innerText);
         console.log(amount);
         if(amount-20<0){
-            alert("Insufficient Balance");
+            alert("Insufficient Balance, Recharge at least 20 to call...");
         }else{
             id('coin').innerText=amount-20;
-            alert("Calling");
+            const name = call.parentNode.parentNode.childNodes[1].childNodes[3].innerText;
+            const hotLineNo = call.parentNode.parentNode.childNodes[1].childNodes[5].innerText;
+            alert(`Calling ${name} ${hotLineNo} ...`);
         }
         
     })
