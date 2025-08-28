@@ -85,7 +85,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -111,7 +111,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -137,7 +137,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -164,7 +164,7 @@
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
               <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
+              <button class="btn copy-btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -215,7 +215,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -241,7 +241,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -267,7 +267,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -293,7 +293,7 @@
             </div>
             
             <div class="mt-4 flex pb-5 px-5 justify-between ">
-              <button class="btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
+              <button class="btn copy-btn rounded-lg w-[calc(50%-2%)]"><i class="fa-regular fa-copy"></i>Copy</button>
               <button class="btn call-btn rounded-lg bg-[#00A63E] w-[calc(50%-2%)] text-white"><i class="fa-solid fa-phone "></i>Call</button>
             </div>
           </div>
@@ -312,19 +312,31 @@
             <p class="text-base font-bold">Call History</p>
           </div>
           <div>
-            <button class="btn rounded-3xl bg-[#00A63E] text-white">Clear</button>
+            <button id="clear-history-btn" class="btn rounded-3xl bg-[#00A63E] text-white">Clear</button>
           </div>
         </div>
 
         <!-- history -->
-        <div class="flex justify-between p-3 items-center bg-gray-100 rounded-xl mx-3">
-          <div>
-            <h1 class="font-bold text-sm">Fire Service Number</h1>
-            <p class="text-sm">999</p>
-          </div>
-          <div>11:36:59 AM</div>
+        <div id="call-history">
+
+          <!-- <div class="flex justify-between p-3 items-center bg-gray-100 rounded-xl mx-3 mb-1">
+            <div>
+              <h1 class="font-bold text-sm">Fire Service Number</h1>
+              <p class="text-sm">999</p>
+            </div>
+            <div>11:36:59 AM</div>
+          </div> -->
+
         </div>
+
+        
+
+        
+
+
       </div>
+
+
      </section>
 
      <script src="./script.js"></script>

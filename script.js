@@ -13,20 +13,52 @@ for(const heart of heartIcon){
 }
 
 
-// call function and alert messege
+// call functionality, alert messege & call history
 let calling = document.getElementsByClassName("call-btn");
 for(const call of calling){
+
+    // added to call history
+    call.addEventListener("click", function(){
+        // console.log(call.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[7].childNodes[7])
+
+        const serviceName = call.parentNode.parentNode.childNodes[1].childNodes[3].innerText;
+        const hotLineNo = call.parentNode.parentNode.childNodes[1].childNodes[5].innerText;
+
+        let temp = document.createElement('div');
+        temp.innerHTML =   `
+            <div class="flex justify-between p-3 items-center bg-gray-100 rounded-xl mx-3 mb-1">
+                <div>
+                    <h1 class="font-bold text-sm">${serviceName}</h1>
+                    <p class="text-sm">${hotLineNo}</p>
+                </div>
+                <div>${new Date().toLocaleTimeString()}</div>
+            </div>
+        `
+
+        let amount = parseInt(id('coin').innerText);
+        if(amount>0){
+            call.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[7].childNodes[7].appendChild(temp);
+        }
+        
+    })
+
+
+    // call alert event
     call.addEventListener("click", function(){
         let amount = parseInt(id('coin').innerText);
-        console.log(amount);
+        // console.log(amount);
         if(amount-20<0){
             alert("Insufficient Balance, Recharge at least 20 to call...");
         }else{
             id('coin').innerText=amount-20;
-            const name = call.parentNode.parentNode.childNodes[1].childNodes[3].innerText;
+            const serviceName = call.parentNode.parentNode.childNodes[1].childNodes[3].innerText;
             const hotLineNo = call.parentNode.parentNode.childNodes[1].childNodes[5].innerText;
-            alert(`Calling ${name} ${hotLineNo} ...`);
+            alert(`Calling ${serviceName} ${hotLineNo} ...`);
         }
         
-    })
+    }) 
 }
+
+id("clear-history-btn").addEventListener("click", function(){
+    id("call-history").innerHTML = " ";
+})
