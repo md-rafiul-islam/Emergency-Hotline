@@ -59,6 +59,23 @@ for(const call of calling){
     }) 
 }
 
+
+// clear history
 id("clear-history-btn").addEventListener("click", function(){
     id("call-history").innerHTML = " ";
 })
+
+
+// copy functionality
+let copyBtn = document.getElementsByClassName('copy-btn');
+for(const copy of copyBtn){
+    copy.addEventListener('click',function(){
+                
+        let ans = parseInt(id('copy-no').innerText);
+        ans++;
+        id('copy-no').innerText=ans;
+        ans = copy.parentNode.parentNode.childNodes[1].childNodes[5].innerText;
+        navigator.clipboard.writeText(ans);
+        alert(`Number copied ${ans}`);
+    })
+}
