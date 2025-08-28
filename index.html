@@ -27,12 +27,12 @@
   <body class="max-w-screen-2xl mx-auto bg-[#f5fff6]">
 
     <!-- header section -->
-    <section class="flex justify-between items-center min-h-20">
-      <div class="flex gap-2 justify-center items-center ml-16">
+    <section class="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-20">
+      <div class="flex gap-2 justify-start lg:justify-center items-center ml-2 lg:ml-16">
         <img class="max-h-9" src="./assets/logo.png" alt="" />
         <h3 class="text-[#006747] font-bold">Emergency<br />Service</h3>
       </div>
-      <div class="flex mr-16 gap-5">
+      <div class="flex justify-around lg:mr-16 gap-5">
         <button class="btn rounded-3xl bg-[#41ff6b1a]">
           <span id="heart-count">0</span> <img class="h-5" src="./assets/heart.png" alt="" />
         </button>
@@ -47,7 +47,7 @@
 
     <!-- banner section -->
     <section
-      class=" min-h-fit  bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"
+      class=" min-h-fit mt-2 lg:mt-0 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"
     >
       <div class="flex flex-col justify-center items-center text-center text-white py-5">
         <img class="max-w-16" src="./assets/logo-dark.png" alt="" />
@@ -61,10 +61,10 @@
 
 
     <!-- main section  -->
-     <section class="w-[100%] flex flex-row justify-between my-5">
+     <section class="w-[100%] flex flex-col lg:flex-row justify-between mt-4 lg:my-5">
 
       <!-- cards div -->
-      <div class="grid grid-cols-3 gap-3 w-[calc(75%-10px)] ml-6  min-h-[500px]">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:w-[calc(75%-10px)]  lg:ml-6  min-h-[500px]">
 
         <!-- card-1-->
         <div class=" shadow-xl rounded-xl min-h-fit bg-white">
@@ -304,7 +304,7 @@
       </div>
 
         <!-- call history div -->
-      <div class="w-[calc(22%-10px)] mr-6 rounded-lg  h-fit bg-white ">
+      <div class="w-full mt-2 lg:mt-0 lg:w-[calc(22%-10px)] mr-6 rounded-lg  h-fit bg-white ">
 
           <!-- history title and functionality -->
         <div class="flex justify-between p-3 my-1">
